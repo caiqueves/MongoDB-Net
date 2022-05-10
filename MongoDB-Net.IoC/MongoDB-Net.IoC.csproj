@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>MongoDB_Net.IoC</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MongoDB-Net.Application\MongoDB-Net.Application.csproj" />
+    <ProjectReference Include="..\MongoDB-Net.Domain\MongoDB-Net.Domain.csproj" />
+    <ProjectReference Include="..\MongoDB-Net.Infra.Data\MongoDB-Net.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
