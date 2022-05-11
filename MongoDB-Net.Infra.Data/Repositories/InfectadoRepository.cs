@@ -1,12 +1,8 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using MongoDB_Net.Domain.Entities;
 using MongoDB_Net.Domain.Interfaces;
 using MongoDB_Net.Infra.Data.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MongoDB_Net.Infra.Data.Repositories
 {
@@ -25,7 +21,6 @@ namespace MongoDB_Net.Infra.Data.Repositories
         {
             throw new NotImplementedException();
         }
-
         public Task<Infectado> GetById(int? id)
         {
             throw new NotImplementedException();
@@ -33,6 +28,7 @@ namespace MongoDB_Net.Infra.Data.Repositories
 
         public void Create(Infectado infectado)
         {
+            infectado.Id = ObjectId.GenerateNewId();
             _infectadosCollection.InsertOne(infectado);
         }
 

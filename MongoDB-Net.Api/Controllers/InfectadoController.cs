@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MongoDB_Net.Application.DTOs;
 using MongoDB_Net.Application.Interfaces;
-using MongoDB_Net.Domain.Entities;
 
 namespace MongoDB_Net.Controllers
 {
@@ -18,7 +16,7 @@ namespace MongoDB_Net.Controllers
         }
 
         [HttpPost]
-        public ActionResult SalvarInfectado([FromBody] InfectadoDTO dto)
+        public ActionResult SalvarInfectado(InfectadoDTO dto)
         {
             _infectadoService.Add(dto);
 

@@ -10,13 +10,10 @@ namespace MongoDB_Net.IoC
 {
     public static class DependencyInjectionApi
     {
-
         public static void AddDependencyInjectionApi(this IServiceCollection services)
         {
-            //if (services == null) throw new ArgumentNullException(nameof(services));
-
             services.AddSingleton<ApplicationMongoDB>();
-
+            
             services.AddScoped<IInfectadoRepository, InfectadoRepository>();
             services.AddScoped<IInfectadoService, InfectadoService>();
 
